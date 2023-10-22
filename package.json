@@ -1,0 +1,19 @@
+{
+  "name": "stonelord.dev",
+  "description": "Adam Stone-Lord's Personal Site",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/preact": "^3.0.1",
+    "astro": "^3.3.2",
+    "preact": "^10.6.5"
+  }
+}

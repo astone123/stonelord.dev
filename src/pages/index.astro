@@ -1,16 +1,26 @@
 ---
-import { Name } from "../components/Name";
+
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>stonelord.dev</title>
   </head>
-  <body>
-    <h1><Name /></h1>
+  <body class="dark:text-white dark:bg-slate-800">
+    <div class="mx-[20%]">
+      <div class="w-100 flex justify-end mr-[10px] mt-[10px]">
+        <a href="https://github.com/astone123/stonelord.dev">
+          <img class="dark:hidden" src="/github-mark.svg" width="30" />
+          <img class="dark:visible" src="/github-mark-white.svg" width="30" />
+        </a>
+      </div>
+      <div class="my-[20%]">
+        <h1>Hi, I'm Adam</h1>
+      </div>
+    </div>
   </body>
 </html>

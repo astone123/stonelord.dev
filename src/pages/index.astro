@@ -1,90 +1,96 @@
 ---
-
+import "../base.css";
+import { IconLink } from "../components/IconLink.tsx";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>stonelord.dev</title>
   </head>
-  <body class="dark:text-white dark:bg-zinc-800">
+  <body class="font-roboto dark:text-white text-gray-800 dark:bg-zinc-800">
     <div class="flex justify-center">
       <div class="max-w-[680px] w-full mx-[20px]">
-        <div class="w-full flex justify-end mr-[10px] mt-[10px]">
-          <a href="https://github.com/astone123/stonelord.dev">
-            <img
-              class="dark:hidden"
-              alt="View site source code on Github"
-              src="/github-mark.svg"
-              width="35"
-            />
-            <img
-              class="hidden dark:block"
-              alt="View site source code on Github"
-              src="/github-mark-white.svg"
-              width="35"
-            />
-          </a>
+        <div class="w-full flex justify-end pr-[10px] mt-[10px]">
+          <IconLink
+            href="https://github.com/astone123/stonelord.dev"
+            altText="View this site's source code on Github"
+            iconPath="/github-mark.svg"
+            darkIconPath="/github-mark-white.svg"
+          />
         </div>
-        <div class="my-[25px]">
-          <h1>Hi, I'm Adam</h1>
+        <div
+          class="flex flex-col sm:flex-row items-center my-[35px] sm:my-[75px] motion-safe:animate-fadeIn"
+        >
+          <picture class="max-w-[55%] w-[1000px] h-auto">
+            <source srcset="/profile.avif" type="image/avif" />
+            <source srcset="/profile.webp" type="image/webp" />
+            <img
+              class="mb-[30px] sm:mb-0 rounded-full w-full aspect-square block"
+              alt="A picture of Adam"
+            />
+          </picture>
+          <div class="flex flex-col mx-[25px]">
+            <h1 class="text-lg mb-[25px] font-medium">Hi, I'm Adam</h1>
+            <p class="font-light">
+              I build software for the internet. I specialize in automated
+              testing, continuous integration, and the realm of open-source
+              software. I also enjoy messing with home automation/IoT in my
+              spare time.
+            </p>
+
+            <p class="font-light mt-[25px]">
+              In my professional capacity, I'm currently developing application
+              quality tools for <a href="https://www.cypress.io/cloud"
+                >Cypress Cloud</a
+              >. This involves using testing data to generate insights for
+              Cypress users related web accessibility and UI coverage.
+            </p>
+
+            <p class="font-light mt-[25px]">
+              Take a look at <a href="https://github.com/astone123/"
+                >my Github profile</a
+              > to see what else I'm currently working on, or <a
+                href="mailto:adam@stonelord.dev">shoot me an email</a
+              >.
+            </p>
+          </div>
         </div>
-        <footer class="w-full flex items-center justify-evenly">
-          <a href="/resume.pdf" target="_blank">
-            <img
-              class="dark:hidden"
-              alt="View Adam's resume"
-              src="/file-document.svg"
-              width="30"
-            />
-            <img
-              class="hidden dark:block"
-              alt="View Adam's resume"
-              src="/file-document-white.svg"
-              width="30"
-            />
-          </a>
-          <a href="https://github.com/astone123/">
-            <img
-              class="dark:hidden"
-              alt="View Adam's profile on Github"
-              src="/github-mark.svg"
-              width="30"
-            />
-            <img
-              class="hidden dark:block"
-              alt="View Adam's profile on Github"
-              src="/github-mark-white.svg"
-              width="30"
-            />
-          </a>
-          <a
+        <footer
+          class="w-full flex items-center justify-evenly mb-[50px] mt-[60px]"
+        >
+          <IconLink
+            href="/resume.pdf"
+            altText="View Adam's resume"
+            iconPath="/file-document.svg"
+            darkIconPath="/file-document-white.svg"
+          />
+          <IconLink
+            href="https://github.com/astone123/"
+            altText="View Adam's profile on Github"
+            iconPath="/github-mark.svg"
+            darkIconPath="/github-mark-white.svg"
+          />
+          <IconLink
             href="https://www.linkedin.com/in/adam-stone-lord-a9b9aaa8/"
-            target="_blank"
-          >
-            <img
-              src="/LI-In-Bug.png"
-              alt="View Adam's profile on LinkedIn"
-              width="30"
-            />
-          </a>
-          <a href="mailto:adam@stonelord.dev" target="_blank">
-            <img
-              class="dark:hidden"
-              alt="Send Adam an email"
-              src="/email.svg"
-              width="30"
-            />
-            <img
-              class="hidden dark:block"
-              alt="Send Adam an email"
-              src="/email-white.svg"
-              width="30"
-            />
-          </a>
+            altText="View Adam's profile on LinkedIn"
+            iconPath="/LI-In-Bug.png"
+          />
+          <IconLink
+            href="mailto:adam@stonelord.dev"
+            altText="Send Adam an email"
+            iconPath="/email.svg"
+            darkIconPath="/email-white.svg"
+          />
         </footer>
       </div>
     </div>

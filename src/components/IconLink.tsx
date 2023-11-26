@@ -19,12 +19,16 @@ export function IconLink({
         class={`${
           darkIconPath ? "dark:hidden" : ""
         } w-[45px] sm:w-[30px] sm:hover:w-[35px] sm:motion-reduce:hover:w-[30px] transition-all duration-200 motion-reduce:transition-none`}
+        width="30"
+        height="30"
         alt={altText}
         src={iconPath}
       />
       {darkIconPath && (
         <img
           class="hidden dark:block w-[45px] sm:w-[30px] sm:hover:w-[35px] sm:motion-reduce:hover:w-[30px] transition-all duration-200 motion-reduce:transition-none"
+          width="30"
+          height="30"
           alt={altText}
           src={darkIconPath}
         />

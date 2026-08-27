@@ -15,7 +15,11 @@ import { IconLink } from "../components/IconLink.tsx";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>stonelord.dev</title>
+    <meta
+      name="description"
+      content="Adam Stone-Lord is a software engineer who works on developer tools and builds PopOff, a social analytics product for reality TV."
+    />
+    <title>Adam Stone-Lord · stonelord.dev</title>
   </head>
   <body class="font-roboto dark:text-white text-gray-800 dark:bg-zinc-800">
     <div class="flex justify-center">
@@ -43,9 +47,8 @@ import { IconLink } from "../components/IconLink.tsx";
             <h1 class="text-lg mb-[25px] font-medium">Hi, I'm Adam</h1>
             <p class="font-light">
               I build software for the internet. I specialize in automated
-              testing, continuous integration, and the realm of open-source
-              software. I also enjoy messing with home automation/IoT in my
-              spare time.
+              testing, continuous integration, and open-source software. I also
+              enjoy messing with home automation/IoT in my spare time.
             </p>
 
             <p class="font-light mt-[25px]">
@@ -55,6 +58,14 @@ import { IconLink } from "../components/IconLink.tsx";
               >. This involves using testing data to generate insights for
               Cypress users related to their application's accessibility and UI
               coverage.
+            </p>
+
+            <p class="font-light mt-[25px]">
+              Outside of work, I run <a href="https://popoff.tv">PopOff</a>, a
+              social analytics product for reality TV. It records cast members'
+              public follower counts around the clock for shows like Love
+              Island and The Traitors, and serves the data on the site, through
+              a REST API, and over an MCP server for AI agents.
             </p>
 
             <p class="font-light mt-[25px]">
@@ -93,6 +104,9 @@ import { IconLink } from "../components/IconLink.tsx";
             darkIconPath="/email-white.svg"
           />
         </footer>
+        <p class="w-full text-center text-sm font-light opacity-60 mb-[30px]">
+          © 2026 Adam Stone-Lord
+        </p>
       </div>
     </div>
   </body>

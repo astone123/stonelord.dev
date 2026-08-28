@@ -1,5 +1,3 @@
-import { h, Fragment } from "preact";
-
 interface IconLinkProps {
   href: string;
   altText: string;

@@ -1,8 +1,11 @@
 @tailwind base;
 
 @layer base {
+    :root {
+      color-scheme: light dark;
+    }
     a {
-      @apply underline;
+      @apply underline underline-offset-4 decoration-1;
     }
   }
 

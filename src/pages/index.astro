@@ -1,113 +1,142 @@
 ---
+import "@fontsource-variable/bricolage-grotesque";
 import "../base.css";
-import { IconLink } from "../components/IconLink.tsx";
+
+const rows = [
+  {
+    n: "01",
+    title: "Work",
+    desc: "AI features for Cypress, most recently Studio AI, which generates tests inside the Cypress app",
+    href: "https://www.cypress.io/app#test_generation",
+  },
+  {
+    n: "02",
+    title: "PopOff",
+    desc: "Follower counts for Love Island, The Traitors, and other reality shows, sampled around the clock. Rebuilt in 2026 around a REST API and an MCP server for AI agents.",
+    href: "https://popoff.tv",
+  },
+  {
+    n: "03",
+    title: "GitHub",
+    desc: "github.com/astone123",
+    href: "https://github.com/astone123/",
+  },
+  {
+    n: "04",
+    title: "LinkedIn",
+    desc: "in/adam-stone-lord",
+    href: "https://www.linkedin.com/in/adam-stone-lord-a9b9aaa8/",
+  },
+  {
+    n: "05",
+    title: "Email",
+    desc: "adam@stonelord.dev",
+    href: "mailto:adam@stonelord.dev",
+  },
+];
+
+const description =
+  "Adam Stone-Lord is a software engineer at Cypress. He also runs PopOff, a reality-TV analytics service with a REST API and an MCP server for AI agents.";
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Adam Stone-Lord",
+  url: "https://stonelord.dev/",
+  jobTitle: "Software Engineer",
+  sameAs: [
+    "https://github.com/astone123/",
+    "https://www.linkedin.com/in/adam-stone-lord-a9b9aaa8/",
+  ],
+};
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="canonical" href="https://stonelord.dev/" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Adam Stone-Lord is a software engineer who works on developer tools and builds PopOff, a social analytics product for reality TV."
-    />
+    <meta name="description" content={description} />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f2f1ec" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101013" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stonelord.dev/" />
+    <meta property="og:title" content="Adam Stone-Lord" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://stonelord.dev/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Adam Stone-Lord · stonelord.dev</title>
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
   </head>
-  <body class="font-roboto dark:text-white text-gray-800 dark:bg-zinc-800">
-    <div class="flex justify-center">
-      <div class="max-w-[680px] w-full mx-[20px]">
-        <div class="w-full flex justify-end pr-[10px] mt-[10px]">
-          <IconLink
-            href="https://github.com/astone123/stonelord.dev"
-            altText="View this site's source code on Github"
-            iconPath="/github-mark.svg"
-            darkIconPath="/github-mark-white.svg"
-          />
-        </div>
-        <div
-          class="flex flex-col sm:flex-row items-center my-[35px] sm:my-[75px] motion-safe:animate-fadeIn"
-        >
-          <picture class="max-w-[55%] w-[1000px] h-auto">
-            <source srcset="/profile.avif" type="image/avif" />
-            <source srcset="/profile.webp" type="image/webp" />
-            <img
-              class="mb-[30px] sm:mb-0 rounded-full w-full aspect-square block"
-              alt="A picture of Adam"
-            />
-          </picture>
-          <div class="flex flex-col mx-[25px]">
-            <h1 class="text-lg mb-[25px] font-medium">Hi, I'm Adam</h1>
-            <p class="font-light">
-              I build software for the internet. I specialize in automated
-              testing, continuous integration, and open-source software. I also
-              enjoy messing with home automation/IoT in my spare time.
-            </p>
+  <body class="bg-paper text-ink dark:bg-ink dark:text-paper font-sans antialiased">
+    <div class="mx-auto flex min-h-svh w-full max-w-[980px] flex-col px-6 pb-10 pt-8 sm:px-12 sm:pt-12 lg:px-16">
+      <header class="flex items-start justify-between">
+        <a href="/" class="no-underline text-sm font-semibold tracking-[0.02em]">stonelord.dev</a>
+        <img
+          src="/profile-192.jpg"
+          alt="Adam Stone-Lord"
+          width="192"
+          height="192"
+          class="block h-14 w-14 object-cover grayscale contrast-[1.05] transition-[filter] duration-300 hover:grayscale-0 motion-reduce:transition-none"
+        />
+      </header>
 
-            <p class="font-light mt-[25px]">
-              In my professional capacity, I'm currently developing application
-              quality tools for <a href="https://www.cypress.io/cloud"
-                >Cypress Cloud</a
-              >. This involves using testing data to generate insights for
-              Cypress users related to their application's accessibility and UI
-              coverage.
-            </p>
-
-            <p class="font-light mt-[25px]">
-              Outside of work, I run <a href="https://popoff.tv">PopOff</a>, a
-              social analytics product for reality TV. It records cast members'
-              public follower counts around the clock for shows like Love
-              Island and The Traitors, and serves the data through the site, a
-              REST API, and an MCP server for AI agents.
-            </p>
-
-            <p class="font-light mt-[25px]">
-              Take a look at <a href="https://github.com/astone123/"
-                >my Github profile</a
-              > to see what else I'm currently working on, or <a
-                href="mailto:adam@stonelord.dev">shoot me an email</a
-              >.
-            </p>
-          </div>
-        </div>
-        <footer
-          class="w-full flex items-center justify-evenly mb-[50px] mt-[60px]"
-        >
-          <IconLink
-            href="/resume.pdf"
-            altText="View Adam's resume"
-            iconPath="/file-document.svg"
-            darkIconPath="/file-document-white.svg"
-          />
-          <IconLink
-            href="https://github.com/astone123/"
-            altText="View Adam's profile on Github"
-            iconPath="/github-mark.svg"
-            darkIconPath="/github-mark-white.svg"
-          />
-          <IconLink
-            href="https://www.linkedin.com/in/adam-stone-lord-a9b9aaa8/"
-            altText="View Adam's profile on LinkedIn"
-            iconPath="/LI-In-Bug.png"
-          />
-          <IconLink
-            href="mailto:adam@stonelord.dev"
-            altText="Send Adam an email"
-            iconPath="/email.svg"
-            darkIconPath="/email-white.svg"
-          />
-        </footer>
-        <p class="w-full text-center text-sm font-light opacity-60 mb-[30px]">
-          © 2026 Adam Stone-Lord
+      <main class="mt-10 sm:mt-12">
+        <h1 class="text-balance text-[clamp(2.5rem,9vw,4.5rem)] font-extrabold leading-none tracking-[-0.02em]">
+          Adam Stone<span class="text-accent dark:text-accent-dark">-</span>Lord
+        </h1>
+        <p class="mt-5 max-w-[700px] text-[19px] leading-relaxed text-body dark:text-body-dark">
+          I build test tooling for a living and track reality-TV fame on the side.
         </p>
-      </div>
+
+        <ul class="mt-9 list-none border-t-2 border-ink p-0 dark:border-paper">
+          {
+            rows.map((row) => (
+              <li class="border-b border-hairline dark:border-hairline-dark">
+                <a
+                  href={row.href}
+                  class="group grid grid-cols-[2rem_minmax(0,1fr)_1.25rem] items-center gap-x-5 py-4 no-underline sm:grid-cols-[2.75rem_12.5rem_minmax(0,1fr)_1.25rem]"
+                >
+                  <span class="text-xs font-semibold tabular-nums text-accent dark:text-accent-dark">{row.n}</span>
+                  <span class="flex min-w-0 flex-col gap-1 sm:contents">
+                    <span class="text-[17px] font-semibold leading-snug transition-colors group-hover:text-accent dark:group-hover:text-accent-dark motion-reduce:transition-none">
+                      {row.title}
+                    </span>
+                    <span class="text-sm leading-relaxed text-muted dark:text-muted-dark">{row.desc}</span>
+                  </span>
+                  <svg
+                    class="h-3.5 w-3.5 text-accent transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-accent-dark motion-reduce:transition-none motion-reduce:group-hover:transform-none"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17L17 7" />
+                    <path d="M8 7h9v9" />
+                  </svg>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </main>
+
+      <footer class="mt-auto flex items-baseline justify-between gap-4 pt-14 text-[13px] text-muted dark:text-muted-dark">
+        <span>© 2026 Adam Stone-Lord</span>
+        <span class="text-right">
+          Built with <a href="https://astro.build">Astro</a> · <a
+            href="https://github.com/astone123/stonelord.dev">Source</a>
+        </span>
+      </footer>
     </div>
   </body>
 </html>

@@ -6,13 +6,13 @@ const rows = [
   {
     n: "01",
     title: "Work",
-    desc: "Application-quality tools for Cypress Cloud — a11y and UI-coverage insights from real test data",
-    href: "https://www.cypress.io/cloud",
+    desc: "AI features for Cypress — most recently Studio AI, test generation built into the Cypress app",
+    href: "https://www.cypress.io/app#test_generation",
   },
   {
     n: "02",
     title: "PopOff",
-    desc: "popoff.tv — reality-TV follower tracking · REST API · MCP server",
+    desc: "Follower counts for Love Island, The Traitors, and more, sampled around the clock — rebuilt in 2026 around a REST API and MCP server for AI agents",
     href: "https://popoff.tv",
   },
   {
@@ -29,12 +29,6 @@ const rows = [
   },
   {
     n: "05",
-    title: "Résumé",
-    desc: "resume.pdf",
-    href: "/resume.pdf",
-  },
-  {
-    n: "06",
     title: "Email",
     desc: "adam@stonelord.dev",
     href: "mailto:adam@stonelord.dev",
@@ -42,7 +36,7 @@ const rows = [
 ];
 
 const description =
-  "Adam Stone-Lord is a software engineer who works on developer tools and builds PopOff, a social analytics product for reality TV.";
+  "Adam Stone-Lord is a software engineer at Cypress and the builder of PopOff, a reality-TV social analytics service with a REST API and MCP server for AI agents.";
 
 const person = {
   "@context": "https://schema.org",
@@ -98,7 +92,8 @@ const person = {
           Adam Stone<span class="text-accent dark:text-accent-dark">-</span>Lord
         </h1>
         <p class="mt-5 max-w-[700px] text-[19px] leading-relaxed text-body dark:text-body-dark">
-          Application-quality tooling at Cypress Cloud by day. PopOff by night.
+          I keep building tools that answer two questions: does this app actually work, and
+          who’s actually famous on reality TV right now?
         </p>
 
         <ul class="mt-9 list-none border-t-2 border-ink p-0 dark:border-paper">
@@ -138,8 +133,9 @@ const person = {
 
       <footer class="mt-auto flex items-baseline justify-between gap-4 pt-14 text-[13px] text-muted dark:text-muted-dark">
         <span>© 2026 Adam Stone-Lord</span>
-        <span>
-          Built with <a href="https://astro.build">Astro</a> · <a href="https://github.com/astone123/stonelord.dev">Source</a>
+        <span class="text-right">
+          Built with <a href="https://astro.build">Astro</a> and a lot of Claude · taste is mine · <a
+            href="https://github.com/astone123/stonelord.dev">Source</a>
         </span>
       </footer>
     </div>
